@@ -1,85 +1,79 @@
-# Cities API
+Cities API
+<p align="center"> <img src="https://img.shields.io/badge/Java-17-blue"> <img src="https://img.shields.io/badge/Spring%20Boot-3.x-success"> <img src="https://img.shields.io/badge/PostgreSQL-16-blue"> <img src="https://img.shields.io/badge/Status-Active-brightgreen"> <img src="https://img.shields.io/badge/License-MIT-lightgrey"> </p>
+📘 About the Project
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-17-blue"> 
-  <img src="https://img.shields.io/badge/Spring%20Boot-3.x-success"> 
-  <img src="https://img.shields.io/badge/PostgreSQL-16-blue"> 
-  <img src="https://img.shields.io/badge/Status-Ativo-brightgreen"> 
-  <img src="https://img.shields.io/badge/Licença-MIT-lightgrey">
-</p>
+This project was created during a Digital Innovation One (DIO) Java training course by Rodrigo Peleias.
 
----
+The Cities API is a REST application built with Java Spring Boot, providing structured data about countries, states, and cities, including distance calculation between two cities.
+The project follows clean architecture principles, good practices, and clear documentation.
 
-## 📘 Sobre o Projeto
+📑 Table of Contents
 
-A **Cities API** é uma aplicação REST desenvolvida em **Java Spring Boot** que fornece dados estruturados sobre **países, estados e cidades**, incluindo cálculo de distância entre duas cidades.
-O projeto segue boas práticas de arquitetura, organização e documentação.
+Overview
 
----
+Technologies
 
-## 📑 Sumário
+Features
 
-1. [Visão Geral](#visão-geral)
-2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-3. [Funcionalidades](#funcionalidades)
-4. [Endpoints](#endpoints)
-5. [Arquitetura](#arquitetura)
-6. [Deploy](#deploy)
-7. [Contribuição](#contribuição)
-8. [Licença](#licença)
+Endpoints
 
----
+Architecture
 
-## Visão Geral
+Deployment
 
-O projeto foi criado com foco em:
+Contributing
 
-* Separação clara de camadas (**Controller**, **Service**, **Repository**)
-* Conexão com banco de dados remoto na **Render**
-* Manutenção simples e escalável
-* Respostas padronizadas e consistentes
+License
 
----
+Overview
 
-## Tecnologias Utilizadas
+The project was designed with the following goals:
 
-* Java 17
-* Spring Boot
-* Spring Web
-* Spring Data JPA
-* PostgreSQL 16
-* Maven
-* Render (deploy)
+Clear separation of layers (Controller, Service, Repository)
 
----
+Connection to a remote database hosted on Render
 
-## Funcionalidades
+Easy maintenance and scalability
 
-* Consulta de países
-* Consulta de estados
-* Consulta de cidades
-* Cálculo de distância entre cidades (`by-point` e `by-cube`)
-* Integração completa com PostgreSQL
+Standardized and consistent API responses
 
----
+Technologies
 
-## Endpoints
+Java 17
 
-### 📍 Tabela de Endpoints
+Spring Boot
 
-| Método | Rota          | Descrição                                    |
-| ------ | ------------- | -------------------------------------------- |
-| GET    | **/paises**   | Lista todos os países                        |
-| GET    | **/estados**  | Lista todos os estados                       |
-| GET    | **/cidades**  | Lista todas as cidades                       |
-| GET    | **/by-point** | Calcula distância entre cidades usando POINT |
-| GET    | **/by-cube**  | Calcula distância entre cidades usando CUBE  |
+Spring Web
 
----
+Spring Data JPA
 
-## Arquitetura
+PostgreSQL 16
 
-```
+Maven
+
+Render (deployment)
+
+Features
+
+List all countries
+
+List all states
+
+List all cities
+
+Distance calculation between two cities (by-point and by-cube)
+
+Full integration with PostgreSQL
+
+Endpoints
+📍 Endpoint Table
+Method	Route	Description
+GET	/paises	Returns all countries
+GET	/estados	Returns all states
+GET	/cidades	Returns all cities
+GET	/by-point	Calculates distance using the POINT strategy
+GET	/by-cube	Calculates distance using the CUBE strategy
+Architecture
 src/
  └── main/
      ├── java/
@@ -90,27 +84,22 @@ src/
      │       └── model/
      └── resources/
          ├── application.properties
-         └── data.sql / schema.sql (opcional)
-```
+         └── data.sql / schema.sql (optional)
 
-Arquitetura pensada para facilitar manutenção e futuras expansões.
 
----
+Architecture designed for clarity, maintainability, and future scalability.
 
-## Deploy
+Deployment
 
-A API está disponível publicamente via **Render**:
-**[https://cities-api-0il5.onrender.com](https://cities-api-0il5.onrender.com)**
+The API is publicly available on Render:
+👉 https://cities-api-0il5.onrender.com
 
----
+Contributing
 
-## Contribuição
+Contributions are welcome!
+Feel free to open issues or submit pull requests.
 
-Contribuições são bem-vindas!
-Sinta-se à vontade para abrir **issues** ou enviar **pull requests**.
+License
 
----
-
-## Licença
-
-Licenciado sob **MIT License**. Você pode usar, estudar e modificar o código livremente.
+Licensed under the MIT License.
+You are free to use, study, and modify this project.
